@@ -36,6 +36,7 @@ contract Medical {
     }
 
     function addHospital(address h_owner, string memory name) public onlyOwner{ 
+        require(!hospitals[msg.sender].exists, "Hospital exists");
         hospitals[h_owner] = Hospital(name, block.timestamp, true);
         emit HospitalAddSuccess(h_owner, name, block.timestamp);
     }
