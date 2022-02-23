@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <nav className="w-full flex md:justify-center ">
       <div className="md:flex-[0.5] flex-initial justify-center items-center">
-        <p>EMDRS</p>
+        <p>Electronic Medical Data Recording System</p>
       </div>
       <ul className="text-black md:flex hidden list-none flex-row justify-between items-center flex-initial">
         {["Hospitals", "Doctors", "Patients", "Reports"].map((item, index) => (
