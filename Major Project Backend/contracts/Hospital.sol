@@ -36,7 +36,9 @@ contract Hospital  {
 
      }
       
-     
+     function changeOwner(address newOwner) public isOwner{
+        owner = newOwner;
+    }
      
     
     

@@ -39,8 +39,9 @@ contract Patient {
      address owner;
      
       constructor()  public {
-          owner = 0xE6005Cc724c2d44F0aF23d663017a7E375DD7F35; //Address of Hospital
+          owner = msg.sender; //Address of Hospital
       }
+
       
       
       // modifier to give access only to hospital
@@ -52,6 +53,9 @@ contract Patient {
 
      }
       
+      function changeOwner(address newOwner) public isOwner{
+        owner = newOwner;
+    }
      
      
      

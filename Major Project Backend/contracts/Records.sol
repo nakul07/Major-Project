@@ -71,9 +71,9 @@ struct treat{
       /**
      * @dev Create the Token by Passing the Name and Symbol to the ERC721 Constructor
      */
-      constructor() ERC721("AmritaMedicalCoin","AMC") public {
+      constructor() ERC721("NakulMedicalCoin","NMC") public {
           
-          owner = 0x34d8bC94989BbE14BCfd98E0550201ba4970B776; //Address of Doctor
+          owner = msg.sender; //Address of Doctor
           
       }
       
@@ -86,6 +86,10 @@ struct treat{
 
      }
      
+
+     function changeOwner(address newOwner) public isOwner{
+        owner = newOwner;
+    }
      
       /**
      * @dev Function to display name of the token 
